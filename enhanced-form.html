@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Job Application Form</title>
+</head>
+<body>
+  <h2>Job Application Form</h2>
+
+  <form action="/submit-application" method="post">
+    
+    <!-- Personal Info -->
+    <fieldset>
+      <legend>Personal Information</legend>
+
+      <label for="fullname">Full Name:</label>
+      <input type="text" id="fullname" name="fullname" required><br><br>
+
+      <label for="email">Email Address:</label>
+      <input type="email" id="email" name="email" required><br><br>
+
+      <label for="phone">Phone Number:</label>
+      <input type="tel" id="phone" name="phone" pattern="[0-9]{10}" placeholder="e.g., 0712345678" required>
+    </fieldset>
+    <br>
+
+    <!-- Job Details -->
+    <fieldset>
+      <legend>Job Preferences</legend>
+
+      <label for="position">Position Applied For:</label>
+      <select id="position" name="position" required>
+        <option value="">-- Select a position --</option>
+        <option value="developer">Software Developer</option>
+        <option value="designer">UI/UX Designer</option>
+        <option value="analyst">Data Analyst</option>
+      </select><br><br>
+
+      <label>Preferred Work Type:</label><br>
+      <input type="radio" id="fulltime" name="worktype" value="Full-time" required>
+      <label for="fulltime">Full-time</label><br>
+      <input type="radio" id="parttime" name="worktype" value="Part-time">
+      <label for="parttime">Part-time</label><br>
+      <input type="radio" id="remote" name="worktype" value="Remote">
+      <label for="remote">Remote</label>
+    </fieldset>
+    <br>
+
+    <!-- Skills -->
+    <fieldset>
+      <legend>Skills & Documents</legend>
+
+      <label for="skills">List Your Skills:</label><br>
+      <textarea id="skills" name="skills" rows="4" cols="40" placeholder="E.g., Python, SQL, Project Management"></textarea><br><br>
+
+      <label for="resume">Upload Resume (PDF only):</label>
+      <input type="file" id="resume" name="resume" accept=".pdf" required>
+    </fieldset>
+    <br>
+
+    <!-- Agreement -->
+    <input type="checkbox" id="terms" name="terms" required>
+    <label for="terms">I confirm that the information provided is correct.</label>
+    <br><br>
+
+    <button type="submit">Submit Application</button>
+    <button type="reset">Reset</button>
+  </form>
+</body>
+</html>
